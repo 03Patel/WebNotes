@@ -15,6 +15,9 @@ const Port =5000;
 app.use('/api/auth', authRoutes);
 app.use('/api/notes', notesRoutes);
 
+app.get('/', (req, res) => {
+  res.send('✅ Server is running...');
+});
 app.listen(Port,()=>console.log(`Server is running on ${Port}`))
 mongoose.connect(process.env.MONGO_URI).then(()=>{
     console.log('Mongoose Connected')
