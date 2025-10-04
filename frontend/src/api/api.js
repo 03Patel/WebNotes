@@ -1,7 +1,7 @@
 
 import axois from 'axios';
 
-const API = axois.create({baseURL:'http://localhost:5000/api'})
+const API = axois.create({baseURL:'https://webnotesbackend-0k1u.onrender.com/api'})
 
 API.interceptors.request.use((config)=>{
     const token = localStorage.getItem('token');
